@@ -21,7 +21,7 @@ async def on_ready():
 
 @client.event
 async def on_member_join(member):
-	print(f'{member.name} has joined the guild!')
+	print(f'JOIN: 	USER: {member}\n	USER ID:<@!{member.id}>\n	GUILD:{member.guild.name}\n	GUILD ID:{member.guild.id}')
 	await member.create_dm()
 	await member.dm_channel.send(
 		f'BARK BARK BARK BARK BARK'
@@ -29,6 +29,6 @@ async def on_member_join(member):
 
 @client.event
 async def on_member_remove(member):
-	print(f'{member.name} has left the guild!')
+	print(f'LEAVE:	USER: {member}\n	USER ID:<@!{member.id}>\n	GUILD:{member.guild.name}\n	GUILD ID:{member.guild.id}')
 
 client.run(TOKEN)
