@@ -10,7 +10,9 @@ from discord.ext import commands
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
 
-intents = discord.Intents(members=True, messages=True)
+intents = discord.Intents.default()
+intents.members = True
+intents.messages = True
 
 bot = commands.Bot(command_prefix='Ramsay, ')
 
