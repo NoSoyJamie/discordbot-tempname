@@ -14,7 +14,7 @@ intents = discord.Intents.default()
 intents.members = True
 intents.messages = True
 
-bot = commands.Bot(command_prefix='Ramsay, ')
+bot = commands.Bot(command_prefix='Ramsay, ', intents=intents)
 
 @bot.command()
 async def sit(ctx):
