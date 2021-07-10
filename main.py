@@ -19,11 +19,17 @@ async def sit(ctx):
 	await ctx.send('Fuck you, I do what I want.')
 	print(f'COMMAND CALLED: 	COMMAND:	sit\n			USER:		{ctx.author}')
 
+@bot.command()
+async def shit(ctx):
+	await ctx.send(file=discord.File('BRAP.mp3'))
+	print(f'COMMAND CALLED: 	COMMAND:	shit\n			USER:		{ctx.author}')
+
 @bot.event
 async def on_ready():
 	print(
 		f'READY\n'
 	)
+
 
 
 @bot.event
