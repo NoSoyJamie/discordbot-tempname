@@ -13,5 +13,7 @@ async def slot_machine(ctx, wheel_amount: int, weight: float):
 	wheel_weight = [round(x * weight,2) for x in wheel]
 	await ctx.send(f'Your values are: {wheel}. \nWith {weight} weight applied, rounded to 2 places they\'re {wheel_weight}.')
 
+#init the above as commands
+
 def setup(bot):
 	bot.add_command(slot_machine)

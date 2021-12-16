@@ -22,3 +22,11 @@ async def on_error(event, *args, **kwargs):
 			print(f'Unhandled Message\n')
 		else:
 			raise
+
+#init the above as listeners
+
+def setup(bot):
+	bot.add_listener(on_command_error)
+
+def setup(bot):
+	bot.add_listener(on_error)

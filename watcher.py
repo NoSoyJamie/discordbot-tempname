@@ -23,3 +23,14 @@ async def on_member_remove(member):
 @bot.event
 async def on_guild_join(guild):
 	print(f'SERVER JOIN:	GUILD:		{guild.name}\n		GUILD ID:	{guild.id}\n		OWNER:		{guild.owner}\n		OWNER ID:	<@!{guild.owner_id}>\n')
+
+#init the above as listeners
+
+def setup(bot):
+	bot.add_listener(on_member_join)
+
+def setup(bot):
+	bot.add_listener(on_member_remove)
+
+def setup(bot):
+	bot.add_listener(on_guild_join)

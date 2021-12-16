@@ -38,3 +38,7 @@ Thumbs.db
 
 #enviornment variable
 .env
+
+#pycache
+__pycache__/
+.pyc

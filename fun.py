@@ -19,13 +19,24 @@ async def on_message(message):
 		raise discord.DiscordException
 
 ##Ramsay, sit
-@bot.command()
+@commands.command()
 async def sit(ctx):
 	await ctx.reply('No.')
 	print(f'COMMAND CALLED: 	COMMAND:	sit\n			USER:		{ctx.author}')
 
 ##Ramsay, shit
-@bot.command()
+@commands.command()
 async def shit(ctx):
 	await ctx.send(file=discord.File('BRAP.mp3'))
 	print(f'COMMAND CALLED: 	COMMAND:	shit\n			USER:		{ctx.author}')
+
+#init the above as commands
+
+def setup(bot):
+	bot.add_listener(on_message)
+
+def setup(bot):
+	bot.add_command(sit)
+
+def setup(bot):
+	bot.add_command(shit)
