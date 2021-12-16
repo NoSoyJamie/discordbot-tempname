@@ -1,12 +1,6 @@
 #main.py
 
-import os
-import math
-import random
-import discord
-from dotenv import load_dotenv
-from discord.ext import commands
-from discord.ext.commands import has_permissions
+from init import *
 
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
@@ -16,14 +10,16 @@ intents = discord.Intents.default()
 intents.members = True
 intents.messages = True
 
+client = commands.Bot(command_prefix={PREFIX}, intents=intents)
 bot = commands.Bot(command_prefix={PREFIX}, intents=intents)
 
-##returns ready when bot is connected
+##init bot
 @bot.event
 async def on_ready():
-	print(
-		f'READY\n'
-	)
+	print(f"READY\n")
+
+##import slot extension
+bot.load_extension("slots")
 
 ##outputs to terminal when user joins server
 @bot.event
