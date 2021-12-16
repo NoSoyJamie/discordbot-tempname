@@ -8,6 +8,7 @@ import random
 import discord
 from discord.ext import commands
 from discord.ext.commands import has_permissions
+from discord.ext.commands import Bot
 import time
 
 from dotenv import load_dotenv
