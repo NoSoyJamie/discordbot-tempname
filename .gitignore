@@ -42,3 +42,6 @@ Thumbs.db
 #pycache
 __pycache__/
 .pyc
+
+#test file
+test.py

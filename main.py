@@ -22,9 +22,4 @@ print(f'Loaded Module: slots\n')
 bot.load_extension("fun")
 print(f'Loaded Module: fun\n')
 
-##init bot
-@bot.event
-async def on_ready():
-	print(f'INIT SUCCESFUL\n')
-
 bot.run(TOKEN)

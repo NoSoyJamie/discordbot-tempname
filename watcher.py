@@ -19,12 +19,20 @@ async def on_member_join(member):
 async def on_member_remove(member):
 	print(f'MEMBER LEAVE:	USER:		{member}\n		USER ID:	<@!{member.id}>\n		GUILD:		{member.guild.name}\n		GUILD ID:	{member.guild.id}\n')
 
-##outputs to terminal when bot is invited to new server
+##monitors for guild joins, checks if db entry exists for guild and creates dir if not
 @bot.event
 async def on_guild_join(guild):
 	print(f'SERVER JOIN:	GUILD:		{guild.name}\n		GUILD ID:	{guild.id}\n		OWNER:		{guild.owner}\n		OWNER ID:	<@!{guild.owner_id}>\n')
+	if os.path.isdir(f"{DB_FOLDER}/{guild.id}"):
+		print('Joined known server, skipping...\n')
+	else:
+		print('Joined unknown server, creating db entry...\n')
+		os.mkdir(f"{DB_FOLDER}/{guild.id}")
+
+#monitors for guild joins, checks if db entry exists for guild and creates dir if not
 
 #init the above as listeners
+
 
 def setup(bot):
 	bot.add_listener(on_member_join)

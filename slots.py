@@ -2,7 +2,6 @@
 
 from init import *
 
-#TODO make a database schema to store vars in different files, per server (folder) > per user (file). Store slots_weight in file alongside other relevant vars
 @commands.command(name='slots', help='WIP, slots command, say !slots wheel_amount weight to generate a shitty array.')
 async def slot_machine(ctx, wheel_amount: int, weight: float):
 	print(f'COMMAND CALLED: 	COMMAND:	slots\n			USER:		{ctx.author}		WHEELS:		{wheel_amount}\n')
