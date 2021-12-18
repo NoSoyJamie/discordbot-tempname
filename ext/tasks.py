@@ -11,7 +11,7 @@ class scheduled(commands.Cog):
 		self.pfp_auto_change.start()
 
 	def cog_unload(self):
-		self.pfp_change.cancel()
+		self.pfp_auto_change.cancel()
 
 	@tasks.loop(minutes=15)
 	async def pfp_auto_change(self):
