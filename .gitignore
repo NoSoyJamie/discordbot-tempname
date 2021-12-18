@@ -45,3 +45,6 @@ __pycache__/
 
 #test file
 test.py
+
+#development databse
+db/

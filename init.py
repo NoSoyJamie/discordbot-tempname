@@ -10,8 +10,8 @@ import random
 import discord
 from discord.ext import commands
 from discord.ext.commands import has_permissions
-from discord.ext.commands import Bot
-import time
+from discord.ext.commands import bot
+
 
 from dotenv import load_dotenv
 
@@ -24,7 +24,7 @@ intents = discord.Intents.default()
 intents.members = True
 intents.messages = True
 
-client = commands.Bot(command_prefix={PREFIX}, intents=intents)
+#client = commands.Bot(command_prefix={PREFIX}, intents=intents)
 bot = commands.Bot(command_prefix={PREFIX}, intents=intents)
 
 ##when ready, initalizes the bot
