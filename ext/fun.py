@@ -33,6 +33,13 @@ class fun(commands.Cog):
 	async def shit(self, ctx):
 		await ctx.send(file=discord.File('assets\BRAP.mp3'))
 		print(f'COMMAND CALLED: 	COMMAND:	shit\n			USER:		{ctx.author}')
+	
+	@commands.command()
+	async def printer(self, ctx):
+		await ctx.send(f'Command just ran, waiting 3 seconds')
+		await asyncio.sleep(3)
+		await ctx.send(f'Second command just ran')
+
 
 #init the above as commands
 

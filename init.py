@@ -8,7 +8,8 @@ import os
 import math
 import random
 import discord
-from discord.ext import commands
+import asyncio
+from discord.ext import tasks, commands
 from discord.ext.commands import has_permissions
 from discord.ext.commands import bot
 
@@ -43,4 +44,3 @@ async def on_ready():
 #			print('Discovered unknown server, creating db entry...')
 			os.mkdir(f"{DB_FOLDER}/{guild.id}")
 	print('INIT SUCCESFUL\n')
-
