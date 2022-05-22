@@ -10,7 +10,7 @@ class spiderman(commands.Cog):
 	async def picture(self, ctx):
 		frog = ctx.guild.get_member(426759102668996618)
 		print(f'COMMAND:      picture  \nUSER:	{ctx.author}\n\n')
-		if random.random() < 0.05:
+		if random.random() < 0.5:
 			await ctx.send(f'What is this damn amphibian creature doing on my desk!')
 			try:
 				await frog.kick()
